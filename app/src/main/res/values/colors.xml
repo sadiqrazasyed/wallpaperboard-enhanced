@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#DC4316</color>
+    <color name="colorPrimaryDark">#C43916</color>
+    <color name="colorAccent">#F25A16</color>
+
+    <color name="darkColorPrimary">#DC4316</color>
+    <color name="darkColorPrimaryDark">#C43916</color>
+    <color name="darkColorAccent">#F25A16</color>
+
+    <!-- Splash Screen -->
+    <color name="splashColor">#F2F2F2</color>
+
+    <!-- Toolbar -->
+    <color name="toolbarIcon">#FFFFFF</color>
+    <color name="toolbarIconDark">#FFFFFF</color>
+    
+    <color name="searchBar">#FFFFFF</color>
+    <color name="searchBarDark">#FFFFFF</color>
+    <color name="searchBarIcon">#6E6E6E</color>
+    <color name="searchBarIconDark">#6E6E6E</color>
+    
+    <color name="tabIcon">#6E6E6E</color>
+    <color name="tabIconDark">#FFFFFF</color>
+    <color name="tabIconSelected">#20AC6B</color>
+    <color name="tabIconSelectedDark">#20AC6B</color>
+
+    <!-- Navigation View -->
+    <color name="navigationViewTitle">#FFFFFF</color>
+    <color name="navigationViewTitleBack">#55000000</color>
+
+    <color name="navigationViewText">#D9000000</color>
+    <color name="navigationViewTextDark">#FFFFFF</color>
+    <color name="navigationViewTextSelected">#DC4316</color>
+    <color name="navigationViewTextSelectedDark">#DC4316</color>
+    <color name="navigationViewSelectedBackground">#00000000</color>
+    <color name="navigationViewSelectedBackgroundDark">#00000000</color>
+
+    <!-- Card -->
+    <color name="cardBackground">#FFFFFF</color>
+    <color name="cardBackgroundDark">#222222</color>
+
+    <!-- Ripple -->
+    <color name="rippleColor">#4D000000</color>
+    <color name="rippleColorDark">#4DFFFFFF</color>
+
+    <!-- Attributes -->
+    <color name="mainBackground">#EAEAEA</color>
+    <color name="mainBackgroundDark">#181818</color>
+    <color name="primaryText">#D9000000</color>
+    <color name="primaryTextDark">#FFFFFF</color>
+    <color name="secondaryText">#8C000000</color>
+    <color name="secondaryTextDark">#B3FFFFFF</color>
+
+    <color name="dividerList">#18000000</color>
+    <color name="dividerListDark">#18FFFFFF</color>
+
+</resources>

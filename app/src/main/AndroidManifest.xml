@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:installLocation="auto"
+    package="com.dm.wallpaper.board.sample">
+
+    <!-- If you are not using donation and premium request, you need to remove BILLING permission -->
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <!-- If you are not using license checker, you need to remove CHECK_LICENSE permission -->
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:supportsRtl"
+        android:name="com.dm.wallpaper.board.sample.applications.WallpaperBoard">
+
+        <activity android:name="com.dm.wallpaper.board.sample.activities.SplashActivity"
+            android:launchMode="singleTop"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.dm.wallpaper.board.sample.activities.MainActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SET_WALLPAPER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.dm.wallpaper.board.sample.activities.MuzeiActivity"
+            android:label="@string/muzei_settings"
+            android:theme="@style/AppTheme"
+            android:exported="true"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
+
+        <service android:name="com.dm.wallpaper.board.sample.services.MuzeiService"
+            android:label="@string/muzei_art_source_name"
+            android:description="@string/muzei_art_source_desc"
+            android:icon="@drawable/ic_muzei_logo"
+            android:permission="android.permission.WAKE_LOCK">
+            <intent-filter>
+                <action android:name="com.google.android.apps.muzei.api.MuzeiArtSource" />
+            </intent-filter>
+            <meta-data android:name="color" android:value="@color/muzei_color" />
+            <meta-data android:name="settingsActivity"
+                android:value="com.dm.wallpaper.board.sample.activities.MuzeiActivity"/>
+        </service>
+
+        <!-- This is important -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+
+    </application>
+
+</manifest>
