@@ -845,10 +845,10 @@ public class WallpaperBoardPreviewActivity extends AppCompatActivity implements 
         Random r = new Random();
 
         //minimum number to generate as random number
-        int minNumber = 2;
+        int minNumber = Integer.parseInt(getString(R.string.ad_min_count));
 
         //maximum number to generate as random number
-        int maxNumber = 4;
+        int maxNumber = Integer.parseInt(getString(R.string.ad_max_count));
 
         //get the next random number within range
         int randomNumber = r.nextInt((maxNumber-minNumber)+minNumber)+minNumber;
@@ -874,10 +874,10 @@ public class WallpaperBoardPreviewActivity extends AppCompatActivity implements 
         Random r = new Random();
 
         //minimum number to generate as random number
-        int minNumber = 2;
+        int minNumber = Integer.parseInt(getString(R.string.ad_closemin_count));
 
         //maximum number to generate as random number
-        int maxNumber = 4;
+        int maxNumber = Integer.parseInt(getString(R.string.ad_closemax_count));
 
         //get the next random number within range
         int randomNumber = r.nextInt((maxNumber-minNumber)+minNumber)+minNumber;

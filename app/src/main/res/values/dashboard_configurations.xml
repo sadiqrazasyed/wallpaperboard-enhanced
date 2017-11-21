@@ -124,12 +124,34 @@
     <!-- Your Admob App ID -->
     <string name="admob_app_id">ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx</string>
 
-    <!-- Your Interstitial Ad Unit ID -->
-    <string name="admob_interstitial_id">ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx</string>
+    <!-- Your Interstitial Ad Unit ID (current ad unit ID is from google for testing purposes) -->
+    <string name="admob_interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
 
     <!-- Your Device Test ID (This is to test your ads without getting banned) -->
     <!-- If you don't know your device test Id then search for it on web -->
     <string name="admob_testdevice_id">xxxxxxxxxxxxxxxxxxxxxxxxxx</string>
+
+    <!-- ======================================================================================= -->
+    <!-- Show ads in between min and max value randomly when user clicks on Apply Wallpaper button -->
+    <!-- Example : Min = 2, Max = 4 = User will see an ad randomly between 2 to 4. Either the second time he applies or 3rd, or maybe 4th -->
+    <!-- This method is used so that the user doesn't figure out the pattern &/or try to prevent it -->
+    <!-- Recommended value is 2 & 4 -->
+
+    <!-- Min Number -->
+    <string name="ad_min_count">2</string>
+    <!-- Max Number -->
+    <string name="ad_max_count">4</string>
+
+    <!-- ======================================================================================= -->
+    <!-- Show "BUY PRO" dialog in between min and max value randomly after user closes ad -->
+    <!-- Example : Min = 2, Max = 5 = User will see a dialog after closing the ad randomly between 2 to 5. Either the second time he closes an ad or 3rd, or maybe 4th, 5th -->
+    <!-- This method is used so that the user doesn't get annoyed of seeing a popup to buy pro version of your app -->
+    <!-- Recommended value is 2 & 5 -->
+
+    <!-- Min Number -->
+    <string name="ad_closemin_count">2</string>
+    <!-- Max Number -->
+    <string name="ad_closemax_count">5</string>
 
     <!-- ======================================================================================= -->
     <!-- Buy Pro Dialog -->
