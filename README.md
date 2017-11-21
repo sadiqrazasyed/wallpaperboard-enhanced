@@ -84,7 +84,7 @@ Change <b>"onesignal_app_id"</b> & <b>"onesignal_google_project_number"</b> with
     <string name="dialog_btn_neutral_adblock">BUY PRO</string>
 ```
 
-* Email Report. This will be pre-written in email when a user trys to send you an email
+* Email Report. This will be pre-written in email when a user tries to send you an email
 ```
     <string name="email_subject">"APP NAME" Bug Report/Feature Request</string>
     <string name="email_lastline">Sent using "APP NAME" email option.</string>
@@ -156,6 +156,8 @@ Change "<b>Min Number</b>" & "<b>Max Number</b>" with your own numbers.
 
 * About Play Store Auto Update Notification
 	- Each time your app is launch, it will compare user installed version & the Play Store version of the app, & if the user has an older version installed, then an alert dialog will be shown along with changelogs synced from Play Store.
+
+---
 
 * Feel free to fork and make your changes.
 
