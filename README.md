@@ -91,9 +91,9 @@ Scroll down to line number 117, which says "ENHANCEMENTS"
 # Advance Editing 
 If you wanna edit when ads are shown or/and when the "BUY PRO" dialog should be shown, then follow this.
 
-* Head over to <b>/library/java/activities/"WallpaperBoardPreviewActivity.java"</b>
+* Inside dashboard_configurations.xml
 
-Scroll down to line number 842
+Scroll down to line number 140
 
 * Example & Info : 
 
@@ -101,66 +101,27 @@ Shows ads in between min and max value randomly when user clicks on <b>Apply Hom
 
 Example : Min = 2, Max = 4 : User will see an ad randomly between 2 to 4. Either the second time he applies or 3rd, or maybe 4th time. 
 
-This method is used so that the user doesn't figure out the pattern &/or try to prevent it
+This method is used so that the user doesn't figure out the pattern, get annoyed &/or try to prevent it
 
 Recommended value is 2 & 4 for ads
 
 Samething for "BUY PRO" alert dialog. It will be shown after an ad has been closed (same method)
 
 ```
-    private void counterCounts()
-    {
-        //define a new Random class
-        Random r = new Random();
-
-        //minimum number to generate as random number
-        int minNumber = 2;
-
-        //maximum number to generate as random number
-        int maxNumber = 4;
-
-        //get the next random number within range
-        int randomNumber = r.nextInt((maxNumber-minNumber)+minNumber)+minNumber;
-
-        if (+totalCount>=(randomNumber)) {
-            //Resets the counter
-            totalCount = 0;
-            editor.putInt("counter", 0);
-            editor.commit();
-            //Shows ad
-            if (mInterstitialAd.isLoaded()) {
-                mInterstitialAd.show();
-            } else {
-                Log.d("TAG", "The interstitial wasn't loaded yet.");
-                requestNewInterstitial();
-            }
-        }
-    }
-
-    private void countAdsMethod()
-    {
-        //define a new Random class
-        Random r = new Random();
-
-        //minimum number to generate as random number
-        int minNumber = 2;
-
-        //maximum number to generate as random number
-        int maxNumber = 4;
-
-        //get the next random number within range
-        int randomNumber = r.nextInt((maxNumber-minNumber)+minNumber)+minNumber;
-
-        if (+countAds>=(randomNumber)) {
-            countAds = 0;
-            editor.putInt("number", 0);
-            editor.commit();
-            showDialog();
-        }
-    }
+        <!-- Min Number -->
+    <string name="ad_min_count">2</string>
+    <!-- Max Number -->
+    <string name="ad_max_count">4</string>
 ```
 
 Change "<b>int minNumber</b>" & "<b>int maxNumber</b>" with your own numbers.
+
+```
+    <!-- Min Number -->
+    <string name="ad_closemin_count">2</string>
+    <!-- Max Number -->
+    <string name="ad_closemax_count">5</string>
+```
 
 # Final Report
 
