@@ -124,7 +124,8 @@ Change "<b>Min Number</b>" & "<b>Max Number</b>" with your own numbers.
 ```
 
 # Enhanced Feature-Previews
-<img src="https://drive.google.com/uc?id=1Pc7Y9LV9y8PKUneCw-cL5vqQSnXE92aS" width="300"> <img src="https://drive.google.com/uc?id=1IzCOhbOPGMkYfcneaRkVb5Q0WAU6uD8_" width="300"> <img src="https://drive.google.com/uc?id=1t9Z_qs2FylBhMssVJjqCRnuArDvL_w2a" width="300"> <img src="https://drive.google.com/uc?id=113WwzN6N93c8hnRUl6Ejs8R0ntqGZ9bI" width="300">
+<img src="https://drive.google.com/uc?id=13SVLd3ciOjxQsOfJzSuu9onI3sbfT5fO" width="240"> <img src="https://drive.google.com/uc?id=1Pc7Y9LV9y8PKUneCw-cL5vqQSnXE92aS" width="240"> <img src="https://drive.google.com/uc?id=1IzCOhbOPGMkYfcneaRkVb5Q0WAU6uD8_" width="240"> <img src="https://drive.google.com/uc?id=1t9Z_qs2FylBhMssVJjqCRnuArDvL_w2a" width="240"> <img src="https://drive.google.com/uc?id=113WwzN6N93c8hnRUl6Ejs8R0ntqGZ9bI" width="240"> <img src="https://drive.google.com/uc?id=1ACT2TYfvDOn6e6o4NCZbl_tWtAPiYchx" width="240">
+
 
 # Final Report
 
