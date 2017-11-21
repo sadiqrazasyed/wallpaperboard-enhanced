@@ -64,7 +64,7 @@ Scroll down to line number 117, which says "ENHANCEMENTS"
 
 * Relase another version of your app, without ADS (use WallpaperBoard)
 
-* Put that version link and either change the alert dialog content or leave it
+* Put your ad-free app link and change the alert dialog content.
 ```
     <string name="dialog_title">Don\'t like ads?</string>
     <string name="dialog_content">Upgrade to "YOUR APP NAME" to continue using without any ads.</string>
@@ -73,7 +73,7 @@ Scroll down to line number 117, which says "ENHANCEMENTS"
     <!-- Pro App Link -->
     <string name="pro_app_url">https://google.com</string>
 ```
-* Ad Blocker Prevention Dialog, change dialog content or leave it as it is
+* Ad Blocker Prevention Dialog, change dialog content or leave it as it is.
 ```
     <string name="dialog_title_adblock">Ad Blocker Detected!</string>
     <string name="dialog_content_adblock">It seems like you\'re having an ad-blocker installed on your device. Please note, this app contains a small amount of ads in order to maintain active development. Support us by uninstalling your ad-blocker or consider buying Pro!</string>
@@ -114,7 +114,7 @@ Samething for "BUY PRO" alert dialog. It will be shown after an ad has been clos
     <string name="ad_max_count">4</string>
 ```
 
-Change "<b>int minNumber</b>" & "<b>int maxNumber</b>" with your own numbers.
+Change "<b>Min Number</b>" & "<b>Max Number</b>" with your own numbers.
 
 ```
     <!-- Min Number -->
@@ -123,13 +123,18 @@ Change "<b>int minNumber</b>" & "<b>int maxNumber</b>" with your own numbers.
     <string name="ad_closemax_count">5</string>
 ```
 
+# Enhanced Feature-Previews
+<img src="https://drive.google.com/uc?id=1Pc7Y9LV9y8PKUneCw-cL5vqQSnXE92aS" width="300"> <img src="https://drive.google.com/uc?id=1IzCOhbOPGMkYfcneaRkVb5Q0WAU6uD8_" width="300"> <img src="https://drive.google.com/uc?id=1t9Z_qs2FylBhMssVJjqCRnuArDvL_w2a" width="300"> <img src="https://drive.google.com/uc?id=113WwzN6N93c8hnRUl6Ejs8R0ntqGZ9bI" width="300">
+
 # Final Report
 
 Ads are shown when user clicks on "Save" button, "Apply Homescreen & Lockscreen" button, and "Apply Homscreen"
 
 Feel free to fork and make your changes.
 
+Let me know if you find bugs or have a feature request.
 
+# License
 ```
 Copyright (c) 2017 Dani Mahardhika
 
