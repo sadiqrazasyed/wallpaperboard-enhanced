@@ -108,22 +108,22 @@ dependencies {
     compile 'me.zhanghai.android.materialprogressbar:library:1.4.2'
 
     compile 'com.github.danimahardhika:cafebar:-SNAPSHOT'
-    compile 'com.github.danimahardhika.android-helpers:core:0.0.9'
-    compile 'com.github.danimahardhika.android-helpers:animation:0.0.9'
-    compile 'com.github.danimahardhika.android-helpers:license:0.0.9'
-    compile 'com.github.danimahardhika.android-helpers:permission:0.0.9'
+    compile 'com.github.danimahardhika.android-helpers:core:0.1.0'
+    compile 'com.github.danimahardhika.android-helpers:animation:0.1.0'
+    compile 'com.github.danimahardhika.android-helpers:license:0.1.0'
+    compile 'com.github.danimahardhika.android-helpers:permission:0.1.0'
 
     // OneSignal SDK
     implementation 'com.onesignal:OneSignal:3.+@aar'
     // Required for OneSignal
-    implementation 'com.google.android.gms:play-services-gcm:11.4.2'
-    implementation 'com.google.android.gms:play-services-analytics:11.4.2'
+    implementation 'com.google.android.gms:play-services-gcm:11.6.0'
+    implementation 'com.google.android.gms:play-services-analytics:11.6.0'
 
     // App Updater
     compile 'com.github.javiersantos:AppUpdater:2.6.3'
 
     // Google Ads
-    compile 'com.google.android.gms:play-services-ads:11.4.2'
+    compile 'com.google.android.gms:play-services-ads:11.6.0'
 
     // Material Dialogs With Additional Features
     compile 'com.github.javiersantos:MaterialStyledDialogs:2.1'
