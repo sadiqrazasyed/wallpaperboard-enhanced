@@ -36,11 +36,4 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     // Library
     implementation project(':library')
-    // Google Ads
-    implementation 'com.google.android.gms:play-services-ads:11.4.2'
-    // OneSignal SDK
-    implementation 'com.onesignal:OneSignal:3.+@aar'
-    // Required for OneSignal
-    implementation 'com.google.android.gms:play-services-gcm:11.4.2'
-    implementation 'com.google.android.gms:play-services-analytics:11.4.2'
 }
