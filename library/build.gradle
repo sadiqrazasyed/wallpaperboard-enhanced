@@ -44,8 +44,8 @@ android {
     defaultConfig {
         minSdkVersion rootProject.ext.MinSdk
         targetSdkVersion rootProject.ext.TargetSdk
-        versionCode 172
-        versionName "1.7.0-b3"
+        versionCode 174
+        versionName "1.7.0-b5"
         vectorDrawables.useSupportLibrary = true
         manifestPlaceholders = [onesignal_app_id: "key",
                                 onesignal_google_project_number: "key"]
@@ -107,7 +107,7 @@ dependencies {
     compile 'com.sothree.slidinguppanel:library:3.3.1'
     compile 'me.zhanghai.android.materialprogressbar:library:1.4.2'
 
-    compile 'com.github.danimahardhika:cafebar:-SNAPSHOT'
+    compile 'com.github.danimahardhika:cafebar:1.3.2'
     compile 'com.github.danimahardhika.android-helpers:core:0.1.0'
     compile 'com.github.danimahardhika.android-helpers:animation:0.1.0'
     compile 'com.github.danimahardhika.android-helpers:license:0.1.0'
