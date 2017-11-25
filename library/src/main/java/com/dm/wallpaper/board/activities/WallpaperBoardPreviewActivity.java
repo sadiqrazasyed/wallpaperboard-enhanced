@@ -59,14 +59,15 @@ import com.dm.wallpaper.board.items.WallpaperProperty;
 import com.dm.wallpaper.board.preferences.Preferences;
 import com.dm.wallpaper.board.tasks.LocalFavoritesRestoreTask;
 import com.dm.wallpaper.board.tasks.WallpaperApplyTask;
-import com.dm.wallpaper.board.tasks.WallpaperPropertiesLoaderTask;
 import com.dm.wallpaper.board.tasks.WallpaperPaletteLoaderTask;
-import com.dm.wallpaper.board.utils.Popup;
+import com.dm.wallpaper.board.tasks.WallpaperPropertiesLoaderTask;
 import com.dm.wallpaper.board.utils.Extras;
 import com.dm.wallpaper.board.utils.ImageConfig;
 import com.dm.wallpaper.board.utils.LogUtil;
+import com.dm.wallpaper.board.utils.Popup;
 import com.dm.wallpaper.board.utils.Tooltip;
 import com.dm.wallpaper.board.utils.WallpaperDownloader;
+import com.github.chrisbanes.photoview.PhotoViewAttacher;
 import com.github.javiersantos.materialstyleddialogs.MaterialStyledDialog;
 import com.github.javiersantos.materialstyleddialogs.enums.Style;
 import com.google.android.gms.ads.AdListener;
@@ -89,7 +90,6 @@ import java.util.Random;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
-import uk.co.senab.photoview.PhotoViewAttacher;
 
 /*
  * Wallpaper Board
@@ -366,7 +366,6 @@ public class WallpaperBoardPreviewActivity extends AppCompatActivity implements 
 
         ImageLoader.getInstance().cancelDisplayTask(mImageView);
         WallpaperBoardApplication.sIsClickable = true;
-        if (mAttacher != null) mAttacher.cleanup();
         super.onDestroy();
     }
 
@@ -704,7 +703,6 @@ public class WallpaperBoardPreviewActivity extends AppCompatActivity implements 
 
     private void loadWallpaper(String url) {
         if (mAttacher != null) {
-            mAttacher.cleanup();
             mAttacher = null;
         }
 
@@ -773,22 +771,19 @@ public class WallpaperBoardPreviewActivity extends AppCompatActivity implements 
                         .start();
 
                 if (loadedImage != null && mWallpaper.getColor() == 0) {
-                    try {
-                        Palette.from(loadedImage).generate(palette -> {
-                            int accent = ColorHelper.getAttributeColor(
-                                    WallpaperBoardPreviewActivity.this, R.attr.colorAccent);
-                            int color = palette.getVibrantColor(accent);
-                            if (color == accent)
-                                color = palette.getMutedColor(accent);
+                    Palette.from(loadedImage).generate(palette -> {
+                        if (isFinishing()) return;
 
-                            mWallpaper.setColor(color);
-                            Database.get(WallpaperBoardPreviewActivity.this).updateWallpaper(mWallpaper);
+                        int accent = ColorHelper.getAttributeColor(
+                                WallpaperBoardPreviewActivity.this, R.attr.colorAccent);
+                        int color = palette.getVibrantColor(accent);
+                        if (color == accent)
+                            color = palette.getMutedColor(accent);
 
-                            onWallpaperLoaded();
-                        });
-                    } catch (Exception ignored) {
+                        mWallpaper.setColor(color);
+                        Database.get(WallpaperBoardPreviewActivity.this).updateWallpaper(mWallpaper);
                         onWallpaperLoaded();
-                    }
+                    });
                     return;
                 }
 
