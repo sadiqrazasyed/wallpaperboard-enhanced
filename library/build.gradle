@@ -113,9 +113,6 @@ dependencies {
     compile 'com.github.danimahardhika.android-helpers:license:0.1.0'
     compile 'com.github.danimahardhika.android-helpers:permission:0.1.0'
 
-    // Firebase
-    implementation 'com.google.firebase:firebase-core:11.6.0'
-
     // OneSignal SDK
     implementation 'com.onesignal:OneSignal:3.+@aar'
     // Required for OneSignal
