@@ -277,8 +277,18 @@ public class CollectionFragment extends Fragment {
         if (index > mAdapter.getCount()) return;
         Fragment fragment = mAdapter.getItem(index);
         if (fragment != null && fragment instanceof WallpapersFragment) {
-            WallpapersFragment f = (WallpapersFragment) fragment;
-            f.getWallpapers();
+            ((WallpapersFragment) fragment).getWallpapers();
+        }
+    }
+
+    public void refreshCategories() {
+        if (mAdapter == null) return;
+
+        int index = 2;
+        if (index > mAdapter.getCount()) return;
+        Fragment fragment = mAdapter.getItem(index);
+        if (fragment != null && fragment instanceof CategoriesFragment) {
+            ((CategoriesFragment) fragment).getCategories();
         }
     }
 

@@ -56,7 +56,6 @@ import com.dm.wallpaper.board.fragments.FavoritesFragment;
 import com.dm.wallpaper.board.fragments.SettingsFragment;
 import com.dm.wallpaper.board.fragments.dialogs.InAppBillingFragment;
 import com.dm.wallpaper.board.helpers.BackupHelper;
-
 import com.dm.wallpaper.board.helpers.LicenseCallbackHelper;
 import com.dm.wallpaper.board.helpers.LocaleHelper;
 import com.dm.wallpaper.board.items.InAppBilling;
@@ -201,7 +200,16 @@ public abstract class WallpaperBoardActivity extends AppCompatActivity implement
 
         setFragment(getFragment(mPosition));
         if (!WallpaperBoardApplication.isLatestWallpapersLoaded()) {
-            WallpapersLoaderTask.start(this);
+            WallpapersLoaderTask.with(this)
+                    .callback(success -> {
+                        if (!success) return;
+
+                        Fragment fragment = mFragManager.findFragmentByTag(Extras.TAG_COLLECTION);
+                        if (fragment != null && fragment instanceof CollectionFragment) {
+                            ((CollectionFragment) fragment).refreshCategories();
+                        }
+                    })
+                    .start();
         }
 
         if (Preferences.get(this).isFirstRun()) {
@@ -225,7 +233,7 @@ public abstract class WallpaperBoardActivity extends AppCompatActivity implement
             finish();
         }
 
-        OneSignal.startInit(this)
+         OneSignal.startInit(this)
                 .setNotificationReceivedHandler(new ExampleNotificationReceivedHandler())
                 .setNotificationOpenedHandler(new ExampleNotificationOpenedHandler())
                 .unsubscribeWhenNotificationsAreDisabled(true)
@@ -562,7 +570,7 @@ public abstract class WallpaperBoardActivity extends AppCompatActivity implement
         mNavigationView.getMenu().getItem(mPosition).setChecked(true);
     }
 
-    private void startHandler()
+      private void startHandler()
     {
         Handler handler = new Handler();
 

@@ -13,10 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.danimahardhika.android.helpers.core.utils.LogUtil;
 import com.dm.wallpaper.board.BuildConfig;
 import com.dm.wallpaper.board.R;
 import com.dm.wallpaper.board.helpers.UrlHelper;
-import com.dm.wallpaper.board.utils.LogUtil;
 
 /*
  * Wallpaper Board
@@ -93,33 +93,33 @@ public class AboutSocialAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
                 UrlHelper.Type type = UrlHelper.getType(mUrls[position]);
                 if (type == UrlHelper.Type.INVALID) return;
 
-                if (type == UrlHelper.Type.EMAIL) {
-                    try {
-                        String deviceInfo="YOUR TEXT (Edit this) \n\n\n------------ Device Info ------------";
-                        deviceInfo += "\n Android Version: " + android.os.Build.VERSION.RELEASE;
-                        deviceInfo += "\n API Level: " + android.os.Build.VERSION.SDK_INT;
-                        deviceInfo += "\n Device: " + android.os.Build.DEVICE;
-                        deviceInfo += "\n Board: " + android.os.Build.BOARD;
-                        deviceInfo += "\n Hardware: " + android.os.Build.HARDWARE;
-                        deviceInfo += "\n Build ID: " + android.os.Build.ID;
-                        deviceInfo += "\n Device Brand: " + android.os.Build.BRAND;
-                        deviceInfo += "\n Device Manufacturer: " + android.os.Build.MANUFACTURER;
-                        deviceInfo += "\n Model (and Product): " + android.os.Build.MODEL + " ("+ android.os.Build.PRODUCT + ")";
-                        deviceInfo += "\n Library Version: " + BuildConfig.VERSION_NAME;
-                        deviceInfo += "\n ---------------------------------------------";
-                        deviceInfo += "\n\n" + (mContext.getResources().getString(R.string.email_lastline));
+            if (type == UrlHelper.Type.EMAIL) {
+                try {
+                    String deviceInfo = "YOUR TEXT (Edit this) \n\n\n------------ Device Info ------------";
+                    deviceInfo += "\n Android Version: " + android.os.Build.VERSION.RELEASE;
+                    deviceInfo += "\n API Level: " + android.os.Build.VERSION.SDK_INT;
+                    deviceInfo += "\n Device: " + android.os.Build.DEVICE;
+                    deviceInfo += "\n Board: " + android.os.Build.BOARD;
+                    deviceInfo += "\n Hardware: " + android.os.Build.HARDWARE;
+                    deviceInfo += "\n Build ID: " + android.os.Build.ID;
+                    deviceInfo += "\n Device Brand: " + android.os.Build.BRAND;
+                    deviceInfo += "\n Device Manufacturer: " + android.os.Build.MANUFACTURER;
+                    deviceInfo += "\n Model (and Product): " + android.os.Build.MODEL + " (" + android.os.Build.PRODUCT + ")";
+                    deviceInfo += "\n Library Version: " + BuildConfig.VERSION_NAME;
+                    deviceInfo += "\n ---------------------------------------------";
+                    deviceInfo += "\n\n" + (mContext.getResources().getString(R.string.email_lastline));
 
-                        final Intent email = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                                "mailto", mUrls[position], null));
-                        email.putExtra(Intent.EXTRA_SUBJECT, (mContext.getResources().getString(
-                                R.string.email_subject)));
-                        email.putExtra(Intent.EXTRA_TEXT,deviceInfo);
-                        mContext.startActivity(Intent.createChooser(email,
-                                mContext.getResources().getString(R.string.email_client)));
-                    }
-                    catch (ActivityNotFoundException e) {
+                    final Intent email = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                            "mailto", mUrls[position], null));
+                    email.putExtra(Intent.EXTRA_SUBJECT, (mContext.getResources().getString(
+                            R.string.email_subject)));
+                    email.putExtra(Intent.EXTRA_TEXT, deviceInfo);
+                    mContext.startActivity(Intent.createChooser(email,
+                            mContext.getResources().getString(R.string.email_client)));
+                }
+                catch (ActivityNotFoundException e) {
                         LogUtil.e(Log.getStackTraceString(e));
-                    }
+                }
                     return;
                 }
 
