@@ -45,7 +45,7 @@ android {
         minSdkVersion rootProject.ext.MinSdk
         targetSdkVersion rootProject.ext.TargetSdk
         versionCode 174
-        versionName "1.7.0-b5"
+        versionName "1.7.0-b5-1"
         vectorDrawables.useSupportLibrary = true
         manifestPlaceholders = [onesignal_app_id: "key",
                                 onesignal_google_project_number: "key"]
