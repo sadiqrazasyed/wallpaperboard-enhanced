@@ -1,5 +1,6 @@
 # Wallpaper Board Enhanced <img src="https://raw.githubusercontent.com/danimahardhika/wallpaperboard/master/arts/icon.png" width="35">
- [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![](https://jitpack.io/v/sadiqrazasyed/wallpaperboard-enhanced.svg)](https://jitpack.io/#sadiqrazasyed/wallpaperboard-enhanced) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 
 This is just an enhanced version of WallpaperBoard with additional features.
 
@@ -14,10 +15,46 @@ Thanks to 	- [Dani Mahardhika](https://github.com/danimahardhika)
 * Auto Play-Store App Update Notification</li>
 * Email Feedback Enhancements</li>
 
+# Gradle Dependency
+**Requirements**
+* Latest version of Android Studio</li>
+* Android-SDK Build tools v27</li>
+* API 26 SDK Platform</li>
+* Latest version of Android Support Library</li>
+* Java SE Development Kit 8</li>
+
+Take a look on this [screenshot](https://raw.githubusercontent.com/danimahardhika/candybar-library/698d102f504f5a843af4f5bc67a340a09b3c5889/screenshots/requirements.jpg) for requirements
+
+The minimum API level supported by this library is API 15
+
+Add JitPack repository to root `build.gradle`
+```Gradle
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+Add the dependency
+```Gradle
+dependencies {
+    implementation 'com.github.sadiqrazasyed:wallpaperboard-enhanced:v1.7.0-b5-1'
+}
+```
+
+Or use a snapshot
+```Gradle
+dependecies {
+    implementation('com.github.sadiqrazasyed:wallpaperboard-enhanced:-SNAPSHOT') {
+        changing = true
+    }
+}
+````
+
 # How to Use
 
-* Download/Clone this library (also contians sample app)
-* To configure, follow this <a href="https://github.com/danimahardhika/wallpaperboard/wiki" target="_blank">Wiki Site</a>
+* Either Download/Clone this library (also contians sample app) or use my uploaded Sample App from here : <a href="https://github.com/sadiqrazasyed/wallpaperboard-enhanced-sample" target="_blank">WallpaperBoard Enhanced Sample</a>
+* To configure, follow this <a href="https://github.com/danimahardhika/wallpaperboard/wiki" target="_blank">Wiki Site</a> (BUT USE MY SAMPLE APP)
 * After setting up your app, follow enhanced setting options from below
 
 # Enhancing WallPaperBoard
