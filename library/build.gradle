@@ -45,7 +45,7 @@ android {
         minSdkVersion rootProject.ext.MinSdk
         targetSdkVersion rootProject.ext.TargetSdk
         versionCode 174
-        versionName "1.7.0-b5-1"
+        versionName "1.7.0-b5-2"
         vectorDrawables.useSupportLibrary = true
         manifestPlaceholders = [onesignal_app_id: "key",
                                 onesignal_google_project_number: "key"]
@@ -94,7 +94,7 @@ dependencies {
     compile 'com.jakewharton:butterknife:9.0.0-SNAPSHOT'
     annotationProcessor 'com.jakewharton:butterknife-compiler:9.0.0-SNAPSHOT'
 
-    compile 'com.squareup.okhttp3:okhttp:3.9.0'
+    compile 'com.squareup.okhttp3:okhttp:3.10.0'
 
     compile group: 'cz.msebera.android', name: 'httpclient', version: '4.4.1.1'
     compile 'uk.co.chrisjenx:calligraphy:2.3.0'
@@ -120,14 +120,14 @@ dependencies {
     // OneSignal SDK
     implementation 'com.onesignal:OneSignal:3.+@aar'
     // Required for OneSignal
-    implementation 'com.google.android.gms:play-services-gcm:11.6.2'
-    implementation 'com.google.android.gms:play-services-analytics:11.6.2'
+    implementation 'com.google.android.gms:play-services-gcm:11.8.0'
+    implementation 'com.google.android.gms:play-services-analytics:11.8.0'
 
     // App Updater
     compile 'com.github.javiersantos:AppUpdater:2.6.3'
 
     // Google Ads
-    compile 'com.google.android.gms:play-services-ads:11.6.2'
+    compile 'com.google.android.gms:play-services-ads:11.8.0'
 
     // Material Dialogs With Additional Features
     compile 'com.github.javiersantos:MaterialStyledDialogs:2.1'
