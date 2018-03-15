@@ -38,7 +38,7 @@ allprojects {
 Add the dependency
 ```Gradle
 dependencies {
-    implementation 'com.github.sadiqrazasyed:wallpaperboard-enhanced:v1.7.0-b5-1'
+    implementation 'com.github.sadiqrazasyed:wallpaperboard-enhanced:v1.7.0-b5-2'
 }
 ```
 
